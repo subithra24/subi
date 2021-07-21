@@ -29,7 +29,6 @@ def turn_on_fan(bot,update):
 def turn_off_fan(bot,update):
     aio.send('fan',0)
     data = aio.receive('befroom-fan')
-    
     print(f'Received value:{data.value}')
     chat_id=bot.message.chat_id
     path='https://images-na.ssl-images-amazon.com/images/I/51YbI23n0NL._SX679_.jpg'
