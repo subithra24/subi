@@ -12,7 +12,7 @@ def turn_on_light(bot,update):
     bot.message.reply_text('light is turned on')
     update.bot.sendPhoto(chat_id=chat_id,photo=path)
 def turn_off_light(bot,update):
-    aio.send('bedroom light',0)
+    aio.send('bedroom-light',0)
     data = aio.receive('bedroom-light')
     print(f'Received value:{data.value}')
     chat_id=bot.message.chat_id
@@ -20,7 +20,7 @@ def turn_off_light(bot,update):
     bot.message.reply_text('light is turned off')
     update.bot.sendPhoto(chat_id=chat_id,photo=path)
 def turn_on_fan(bot,update):
-    aio.send('fan',1)
+    aio.send('bedroom-fan',1)
     data = aio.receive('bedroom-fan')
     print(f'Received value:{data.value}')
     chat_id=bot.message.chat_id
@@ -28,8 +28,8 @@ def turn_on_fan(bot,update):
     bot.message.reply_text('fan is turned on')
     update.bot.sendPhoto(chat_id=chat_id,photo=path)
 def turn_off_fan(bot,update):
-    aio.send('fan',0)
-    data = aio.receive('befroom-fan')
+    aio.send('bedroom-fan',0)
+    data = aio.receive('bedroom-fan')
     print(f'Received value:{data.value}')
     chat_id=bot.message.chat_id
     path='https://images-na.ssl-images-amazon.com/images/I/51YbI23n0NL._SX679_.jpg'
